@@ -1,0 +1,90 @@
+/* start global rules */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+:root {
+  --heading-size: 2rem;
+  --title-size: 1.5rem;
+  --text-size: 1rem;
+  --animation-delay: .2s;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
+}
+
+/* end global rules */
+
+
+.slider-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #2d2d2d;
+  line-height: 1.7;
+  color: #FFF;
+}
+
+.slider-content {
+  height: 100%;
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  transform: translateX(0);
+  transition: transform .3s ease-out;
+  overflow: hidden;
+
+}
+
+.slide {
+  width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+  user-select: none;
+  cursor: grab;
+}
+
+.slide h2 {
+  font-size: 2.5rem;
+  color: #FFF;
+}
+
+.slide h4 {
+  font-size: 1.5rem;
+  color: #FFF;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 60%;
+  transition: transform .3s ease-in-out;
+}
+
+.slide a.btn {
+  color: #FFF;
+  padding: 1rem 1.5rem;
+  background-color: #444;
+  text-decoration: none;
+}
+
+
+.grabbing {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+
+.grabbing .slide img {
+  transform: scale(0.9);
+}
